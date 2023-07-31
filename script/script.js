@@ -32,12 +32,12 @@ close.addEventListener ('click',function(){
 const pawin_slide = new Swiper('#pawin_slide',{
     //자동재생-중가로({}) 묶어줘야함
     autoplay:{
-        delay:1000,//슬라이드 간격(밀리초) 기본3초
+        delay:10000,//슬라이드 간격(밀리초) 기본3초
         disableOnInteraction:false, //버튼 클릭후 자동재생 유지
     },
     loop:true,  //반복한다. = 자연스럽게 한방향으로 넘어가짐 마지막장 다음다시첫장
-    effect:'fade',
-    // direction:'vertical'
+    // effect:'fade',
+    direction:'horizontal',
     //body안에 있는 모든 swiper-next,prev를 인식하기 때문에 
     //개별인식 가능 한 부모 이름을 반드시 앞에 먼저 작성한다.
     navigation: {
@@ -47,7 +47,9 @@ const pawin_slide = new Swiper('#pawin_slide',{
 });
 //연습----------------------
 const new_slide = new Swiper('#new_slide',{
-    autoplay:{delay:1000},
+    autoplay:{delay:1000,
+        disableOnInteraction:false
+    },
     loop:true,
     navigation: {
         nextEl: '#new_slide .swiper-button-next',

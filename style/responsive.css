@@ -2,10 +2,14 @@
 /*Tablet*/
 /*figma tablet 설계 width값과 관계없이
 media max-width의 첫번째 조건 값은 웹사이트 width값 기준으로 설정해서 자연스러운 반응형 웹을 설계한다.*/
+/*1610px  이하일 경우 좌우 15xp 여백 적용*/
 @media screen and (max-width:1160px) {
     header {width:calc(100% - 30px);}
+    /* main #pawin_slide {width:calc(100% - 30px);} */
 }
+
 /*1160end*/
+/*900 start*/
 @media screen and (max-width:900px) {
     header nav ul {display:none;}
     header nav .m_nav {
@@ -27,10 +31,12 @@ media max-width의 첫번째 조건 값은 웹사이트 width값 기준으로 �
     /*m_nav_open*/
     header .m_nav_open {
         background:lime;
-        width:calc(100% - 30px);
         display:block;
-        position:absolute;
-        top:100px;
-        padding:48px 0;
+    }
+    /*pawin-slide*/
+    /*반응형웹의 슬라이드는 높이 고정 슬라이드의 경우 데스크탑, 모바일용의 이미지를 따로
+    제작하고 @media 모바일 조건에서 m 이비지로 변경하는 경로를 작성한다.*/
+    main #pawin_slide .swiper-wrapper .slide1 {
+        background:url(../imges/pawin_slide_m.jpg) center;
     }
 }/*900 end*/

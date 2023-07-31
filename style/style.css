@@ -7,6 +7,7 @@ header {
     flex-flow:row nowrap;
     justify-content:space-between;
     align-items:center;
+    position:relative;
 }
 header h1 {
     background:yellow;
@@ -32,14 +33,15 @@ header nav ul li a {
 }
 /*모바일 메뉴 데스크탑에서 숨기기*/
 header nav .m_nav {display:none;}
-/* header .m_nav_open {display:none;} */
+/* header .m_nav_open {display:none;} *//*햄버거 누르면 나오는 메뉴*/
 header .m_nav_open {
     background:lime;
-    width:calc(100% - 30px);
+    width:100%;
     display:none;
     position:absolute;
     top:100px;
     padding:48px 0;
+    z-index:90000;
 }
 header .m_nav_open #close {
 position:absolute;
@@ -62,13 +64,18 @@ header .m_nav_open ul li a {
 /*-----------------------------main-1. swiper-slide-------------------------------------*/
 /*swiper 플러그인의 정식명칭 클래스는 웹페이지 1장에서 swiper가 2개 이상 들어올 경우
 디자인이 강제로 중복될 수 있으므로 개별 아이디 및 클래스 사용해서 선택자를 만들고 디자인한다.*/
+/*swiper-slide 반응형 설계를 할경우
+swiper-slide 자체가 가변형 기능을 내장하고 있기때문에 가장 바깥쪽 swiper 영역틀
+기준으로 가변크기를 넣어주면 자동으로 반응형에 맞춰지는 슬라이드가 완성된다.
+*/
 main #pawin_slide {background:yellowgreen;
-    width:1160px; height:650px;
+    max-width:1160px; 
+    height:650px;
 }
 main #pawin_slide .swiper-wrapper {}
 main #pawin_slide .swiper-wrapper .swiper-slide {}
 main #pawin_slide .swiper-wrapper .slide1 {
-    background:url(http://picsum.photos/id/20/1160);
+    background:url(../imges/pawin_slide_desktop.jpg) center;
 }
 main #pawin_slide .swiper-wrapper .slide2 {
     background:url(http://picsum.photos/id/21/1160);
@@ -79,12 +86,16 @@ main #pawin_slide .swiper-wrapper .slide3 {
 main #pawin_slide .swiper-wrapper .slide4 {
     background:url(http://picsum.photos/id/23/1160);
 }
-/*버튼*/
+/*swiper-slide prev, next 기본 css (position:absolute)가 내장되어있음
+위치를움직이고 싶다면 position 속성 추가 작성 없이 방향값추가
+*/
 main #pawin_slide .swiper-button-prev {
-    background:url(../imges/left.png) no-repeat;
+    background:url(../imges/left_w.png) no-repeat;
+    left:30px;
 }
 main #pawin_slide .swiper-button-next {
-    background:url(../imges/right.png) no-repeat;
+    background:url(../imges/right_w.png) no-repeat;
+    right:30px;
 }
 /*그룹 선택자*/
 main #pawin_slide .swiper-button-prev,
@@ -96,11 +107,11 @@ main #pawin_slide .swiper-button-next::after {display:none;}
 /*------------------------------연습-----------------------------------*/
 /*--------------1160*300 slide*3 swiper ----------------*/
 main #new_slide {background:skyblue;
-    width:1160px; height:300px;}
+    max-width:1160px; height:300px;}
 main #new_slide .new_wrapper {}
 main #new_slide .swiper-wrapper .swiper-slide {}
 main #new_slide .new-wrapper .n_slide1 {
-    background:url(http://picsum.photos/id/10/1160);
+    background:url(http://picsum.photos/id/10/1160) center;
 }
 main #new_slide .new-wrapper .n_slide2 {
     background:url(http://picsum.photos/id/11/1160);
@@ -108,12 +119,16 @@ main #new_slide .new-wrapper .n_slide2 {
 main #new_slide .new-wrapper .n_slide3 {
     background:url(http://picsum.photos/id/12/1160);
 }
-/*버튼 이미지*/
+/*swiper-slide prev, next 기본 css (position:absolute)가 내장되어있음
+위치를움직이고 싶다면 position 속성 추가 작성 없이 방향값추가
+*/
 main #new_slide .swiper-button-prev {
-    background:url(../imges/left.png) no-repeat;
+    background:url(../imges/left_w.png) no-repeat;
+    left:20px;
 }
 main #new_slide .swiper-button-next {
-    background:url(../imges/right.png) no-repeat;
+    background:url(../imges/right_w.png) no-repeat;
+    right:20px;
 }
 /*버튼 사이즈 넣기 통합 선택자*/
 main #new_slide .swiper-button-prev,
