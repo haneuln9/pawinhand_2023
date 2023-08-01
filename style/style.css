@@ -78,7 +78,7 @@ main #pawin_slide .swiper-wrapper .slide1 {
     background:url(../imges/pawin_slide_desktop.jpg) center;
 }
 main #pawin_slide .swiper-wrapper .slide2 {
-    background:url(http://picsum.photos/id/21/1160);
+    background:url(../imges/pawin_slide_desktop2_2.jpg) center;
 }
 main #pawin_slide .swiper-wrapper .slide3 {
     background:url(http://picsum.photos/id/22/1160);
@@ -103,7 +103,7 @@ main #pawin_slide .swiper-button-next {width:40px; height:40px;}
 /*sipe-slide 라이브러리에서 기본 제공하는 이전,다음 숨기기*/
 main #pawin_slide .swiper-button-prev::after,
 main #pawin_slide .swiper-button-next::after {display:none;}
-
+/*---------------------------------------------슬라이드 메인 끝------------------------*/
 /*------------------------------연습-----------------------------------*/
 /*--------------1160*300 slide*3 swiper ----------------*/
 main #new_slide {background:skyblue;
@@ -136,6 +136,27 @@ main #new_slide .swiper-button-next {width:40px;height: 40px;}
 /*기존 이미지 안보이게 하기*/
 main #new_slide .swiper-button-prev::after,
 main #new_slide .swiper-button-next::after {display:none;}
+/*---------------------------슬라이드 작은거시작(pawin_slide2)------------------------*/
+main #pawin_slide2 {
+    max-width:1160px; margin:0 auto;
+    /*슬라이드 대상으로 img 태그를 삽입한 경우 높이 값은 이미지태그 크기 만큼 자동으로 설정되므로
+    별도의 높이값을 입력하지 않아도됨*/
+}
+main #pawin_slide2 .swiper-wrapper .swiper-slide img {width:100%;}
+/*----------------------------------슬라이드 작은거 끝--------------------*/
+/*----------------------dog_info_slide 입양정보 슬라이드-------------------*/
+main .dog_info{
+    padding:100px 0 50px;
+    font-size: 2rem; text-align:center;
+
+}
+main #dog_info_slide{
+    background: skyblue;
+    max-width:1160px; margin:0 auto;
+    width:calc(100% - 30px);
+}
+main #dog_info_slide img {width:100%;}
+
 
 
 

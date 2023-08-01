@@ -39,4 +39,7 @@ media max-width의 첫번째 조건 값은 웹사이트 width값 기준으로 �
     main #pawin_slide .swiper-wrapper .slide1 {
         background:url(../imges/pawin_slide_m.jpg) center;
     }
+    main #pawin_slide .swiper-wrapper .slide2 {
+        background:url(../imges/pawin_slide_m2_2.jpg) center;
+    }
 }/*900 end*/
